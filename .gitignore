@@ -26,3 +26,9 @@
 *.exe
 *.out
 *.app
+
+# Custom
+backup/
+output.json
+test
+.ipynb_checkpoints
