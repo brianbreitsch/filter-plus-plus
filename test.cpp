@@ -7,7 +7,7 @@
 
 #include "json.hpp"
 
-#include "iir_filter.hpp"
+#include "filter.hpp"
 
 using std::vector;
 using std::cout;
@@ -18,6 +18,8 @@ using std::string;
 using std::ofstream;
 
 using json = nlohmann::json;
+
+using fpp::IIRFilter;
 
 int main() {
     vector<double> input_coeffs = {0.7, 0.05, 0.12, 0.13};
@@ -47,6 +49,7 @@ int main() {
     ofs << "}" << endl;
     ofs.close();
 
+    IIRFilter<double> fil(input_coeffs, output_coeffs);
 }
 
 

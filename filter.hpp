@@ -5,6 +5,7 @@
 #include <iostream>
 #include <type_traits>
 #include <iterator>
+#include <vector>
 #include <string>
 #include <algorithm>
 #include <fstream>
@@ -53,6 +54,10 @@ struct IIRFilter {
         current_input = inputs.begin();
         last_output = outputs.begin();
     }
+
+    template<class ContainerType1, class ContainerType2>
+    IIRFilter(ContainerType1& input_coeffs_, ContainerType2& output_coeffs_) :
+        IIRFilter(input_coeffs_.begin(), input_coeffs_.end(), output_coeffs_.begin(), output_coeffs_.end()) {}
 
     /*
      * Adds input to input queue and performs inner product of filter queues with
