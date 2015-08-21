@@ -8,6 +8,7 @@
 #include <vector>
 #include <string>
 #include <algorithm>
+#include <numeric>
 #include <fstream>
 
 namespace fpp {
