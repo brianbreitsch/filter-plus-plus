@@ -1,6 +1,6 @@
 
-#ifndef __IIR_FILTER_HPP__
-#define __IIR_FILTER_HPP__
+#ifndef __FILTER_HPP__
+#define __FILTER_HPP__
 
 #include <iostream>
 #include <type_traits>
@@ -9,7 +9,7 @@
 #include <algorithm>
 #include <fstream>
 
-namespace iir {
+namespace fpp {
 
 template<
     typename T, //real type
@@ -86,18 +86,10 @@ struct IIRFilter {
         return output;
     }
 
-    /*
-     * Creates and returns butterworth filter coefficients
-     */
-    void bwlp_coeffs(Array numerator, Array denominator) {
-
-    }
-
-
 }; // class IIRFilter
 
 
 
-} // namespace iir
+} // namespace fpp
 
-#endif  // __IIR_FILTER_HPP__
+#endif  // __FILTER_HPP__
