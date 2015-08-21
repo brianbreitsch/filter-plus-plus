@@ -64,7 +64,7 @@ struct IIRFilter {
      * filter coefficients to produce filter output, which it appends to output queue.
      * Returns filter output.
      */
-    T filter(T input) {
+    T f(T input) {
         int n;
         T output;
         // set input

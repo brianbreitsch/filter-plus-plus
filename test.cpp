@@ -34,8 +34,8 @@ int main() {
         signal.push_back(y);
     }
     for_each(signal.begin(), signal.end(), [&output, &filter](double sample) {
-            //filter.filter(sample);
-            output.push_back(filter.filter(sample));
+            //filter.f(sample);
+            output.push_back(filter.f(sample));
         });
 
     string filepath = "output.json";
